@@ -1,7 +1,4 @@
-start java -jar zipkin-service-1\target\zipkin-service-1-0.0.1-SNAPSHOT.jar
-start java -jar zipkin-service-2\target\zipkin-service-2-0.0.1-SNAPSHOT.jar
-start java -jar zipkin-service-3\target\zipkin-service-3-0.0.1-SNAPSHOT.jar
-start java -jar zipkin-service-4\target\zipkin-service-4-0.0.1-SNAPSHOT.jar
-start java -jar zipkin-service-5\target\zipkin-service-5-0.0.1-SNAPSHOT.jar
-start java -jar zipkin-service-6\target\zipkin-service-6-0.0.1-SNAPSHOT.jar
-start java -jar zipkin-service-7\target\zipkin-service-7-0.0.1-SNAPSHOT.jar
+start java "-Dserver.port=8081" "-Dspring.application.name=zipkin-server1" "-Dapp.rest.client.url=http://localhost:8082/zipkin"  -jar zipkin-service-1\target\zipkin-service-1-0.0.1-SNAPSHOT.jar
+start java "-Dserver.port=8082" "-Dspring.application.name=zipkin-server2" "-Dapp.rest.client.url=http://localhost:8083/zipkin"  -jar zipkin-service-1\target\zipkin-service-1-0.0.1-SNAPSHOT.jar
+start java "-Dserver.port=8083" "-Dspring.application.name=zipkin-server3" "-Dapp.rest.client.url=http://localhost:8084/zipkin"  -jar zipkin-service-1\target\zipkin-service-1-0.0.1-SNAPSHOT.jar
+start java "-Dserver.port=8084" "-Dspring.application.name=zipkin-server4"  -jar zipkin-service-1\target\zipkin-service-1-0.0.1-SNAPSHOT.jar
