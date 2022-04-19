@@ -20,6 +20,15 @@ combined with https://www.baeldung.com/spring-cloud-sleuth-single-application fo
 
 (more instructions and source code see https://github.com/openzipkin/zipkin)
 
+without docker:
+- execute "curl -sSL https://zipkin.io/quickstart.sh | bash -s io.zipkin:zipkin-server:LATEST:slim zipkin.jar" in a bash shell
+- java -jar zipkin.jar
+
+or
+- download zipkin.jar from https://mvnrepository.com/artifact/io.zipkin/zipkin-server (latest...)
+  - (make sure to download -slim.jar oder -exec.jar, since you also want to see the ui)
+- java -jar zipkin-server-<version>-slim.jar
+
 ## start the spring boot servers
 - Build-all.bat (mvn clean install)
 - Start-all.bat
