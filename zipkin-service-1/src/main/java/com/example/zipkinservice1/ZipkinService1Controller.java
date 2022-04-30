@@ -44,7 +44,7 @@ public class ZipkinService1Controller {
     }
 
     private void doDelay() {
-        long randomDuration = new Random().nextInt(10) * 1000;
+        long randomDuration = new Random().nextInt(3) * 1000;
         if (randomDuration > 0) {
             Span newSpan = tracer.nextSpan().name("delay").start();
             try (SpanInScope ws = tracer.withSpan(newSpan.start())) {

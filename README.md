@@ -9,6 +9,23 @@ combined with https://www.baeldung.com/spring-cloud-sleuth-single-application fo
   - random Thread.sleep() inside the rest endpoint implementation
   - add a manual span called "delay" to mark the sleep period
 
+## other documentation
+- https://zipkin.io -> documentation of zipkin
+- https://springhow.com/spring-boot-zipkin-distributed-tracing/ -> very good description on how zipkin tracing works
+
+## example of traceid propagation
+- zipkin-server1: [zipkin-server1,3aed12485da9de64,3aed12485da9de64]
+- zipkin-server2: http headers:
+  x-b3-traceid:3aed12485da9de64
+  x-b3-spanid:acf0bfb5bd843135
+  x-b3-parentspanid:3aed12485da9de64
+  x-b3-sampled:1
+- zipkin-server3: http headers:
+  x-b3-traceid:3aed12485da9de64
+  x-b3-spanid:e7f45ae280815ce1
+  x-b3-parentspanid:acf0bfb5bd843135
+  x-b3-sampled:1
+
 # Running the demo
 ## environment used
 - Windows 10

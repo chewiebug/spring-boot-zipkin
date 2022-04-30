@@ -1,4 +1,4 @@
 start java "-Dserver.port=8081" "-Dspring.application.name=zipkin-server1" "-Dapp.rest.client.url=http://localhost:8082/zipkin"  -jar zipkin-service-1\target\zipkin-service-1-0.0.1-SNAPSHOT.jar
 start java "-Dserver.port=8082" "-Dspring.application.name=zipkin-server2" "-Dapp.rest.client.url=http://localhost:8083/zipkin"  -jar zipkin-service-1\target\zipkin-service-1-0.0.1-SNAPSHOT.jar
 start java "-Dserver.port=8083" "-Dspring.application.name=zipkin-server3" "-Dapp.rest.client.url=http://localhost:8084/zipkin"  -jar zipkin-service-1\target\zipkin-service-1-0.0.1-SNAPSHOT.jar
-start java "-Dserver.port=8084" "-Dspring.application.name=zipkin-server4"  -jar zipkin-service-1\target\zipkin-service-1-0.0.1-SNAPSHOT.jar
+start java "-Dserver.port=8084" "-Dspring.application.name=zipkin-server4" "-Dapp.rest.client.url=https://run.mocky.io/v3/ed8d9ae2-7d0d-4411-8b8c-66106d8a2721" -jar zipkin-service-1\target\zipkin-service-1-0.0.1-SNAPSHOT.jar
